@@ -1,0 +1,12 @@
+<table>
+    <tr>
+        <th></th>
+        <th ng-repeat="course in ctrl.allCourses" ng-bind="course.courseName"></th>
+        <th>Average</th>
+    </tr>
+    <tr ng-repeat="student in ctrl.students| averageFilter">
+        <td ng-bind="student.name"></td>
+        <td ng-repeat="g in student.grades" ng-bind="g.grade"></td>
+        <td ng-bind="student.average"></td>
+    </tr>
+</table>
